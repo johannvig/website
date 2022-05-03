@@ -1,0 +1,254 @@
+body{
+  background-color:black;
+ 
+}
+
+/* menu */
+
+.menu{
+  display: flex;     
+  justify-content:center;     
+  align-items:center;
+  font-size: 18px;
+  height:60px;     
+  
+  
+}
+
+.menu li {
+  display:inline-block;
+  text-align:center;
+  width:230px;
+  line-height: 2em ;
+  color: white;
+  text-decoration: none;
+}
+
+.menu li a{
+  text-align:center;
+  display:block;
+  padding: 6px 10px;  
+  color: white;
+  text-decoration: none;  
+}
+
+.menu .sous-menu{
+  position:absolute;
+  display:none;
+  margin:0;
+  padding:0;
+  background-color: black;
+  width:220px;
+  
+  
+  
+}
+
+
+/* sous-menu */
+
+.menu li a:hover{
+  
+  text-decoration-line  : underline ;
+}
+
+
+.menu li:hover .sous-menu{
+  display:block;
+}
+
+
+.sous-menu li{
+  float:left;
+  width:220px;
+  
+}
+
+.li a:hover a{
+  background-color:#111;
+  text-decoration-line  : none ;
+}
+
+
+.menu-deroulant:hover .sous-menu {
+display: block;
+}
+
+
+
+
+/* menu flèche animation */
+
+.menu-deroulant > a:after{
+  content: '❯';
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 10px;
+  
+}
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+
+.menu-deroulant:hover > a:after{
+  animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid white;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid white;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 1s forwards;
+}
+
+
+
+
+/* sous-sous menu */
+
+.sous-menu ul{
+  position: absolute;
+  margin-left: 200px;
+  top: 0;
+  width:220px;
+  background-color:black;
+}
+
+.sous-menu ul{
+display: none;
+}
+
+.sous-menu :hover > ul {
+display: block;
+}
+
+
+.sous-menu > li:after{
+  content: '❯';
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 10px;
+  
+}
+
+.sous-menu li:hover{
+  
+  text-decoration-line  : underline ;
+}
+
+
+/* texte */
+
+.header{
+  text-align:center;
+  
+  
+}
+
+
+
+.ml7 {
+      
+      font-weight: 900;
+      font-size: 3.7em;
+}
+
+
+
+.ml7 .letters {
+      
+      line-height: 4em;
+}
+
+h1 {
+      color: white;
+      font-family: "Roboto";
+      font-weight: bolder !important;
+      font-size: 46px !important;
+      text-transform: uppercase !important;
+}
+
+p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 6em;
+      color: white;
+      font-weight: 200;
+      font-family: "Roboto";
+      line-height: 28px;
+      width: 640px;
+      
+      
+}
+
+/* ring animation */
+
+
+img {
+      position:absolute;
+      width: 40%;
+      top: 70 px ;  
+    
+}
+
+
+
+
+.ring{
+      position:relative;
+      display: flex;
+      justify-content: center;
+      margin: 0%;
+      padding: 0%; 
+      opacity: 0.7;  
+      
+  
+}
+
+
+.texte_centrer {
+  position:absolute;
+  top: 180 px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 350px;
+  color:white;
+}
+
+
+.ringOne img {
+      animation: rotateFirstRing 2s linear infinite;
+}
+
+.ringTwo img {
+      animation: rotateFirstRing 8s linear infinite;
+}
+
+@keyframes rotateFirstRing {
+      from {
+            transform: rotate(0deg);
+      }
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+
