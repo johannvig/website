@@ -1,0 +1,414 @@
+html{
+  height:100%;
+  overflow:hidden;
+}
+
+
+body{
+  background-color:black;
+  margin:0;
+  padding:0;
+  perspective:1px;
+  transform-style:preserve-3d;
+  height:100%;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  font-family: 'Source Sans Pro',Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+
+
+/* menu */
+
+.menu{
+  display: flex;     
+  justify-content:center;     
+  align-items:center;
+  font-size: 18px;
+  height:60px;     
+  
+  
+}
+
+.menu li {
+  display:inline-block;
+  text-align:center;
+  width:230px;
+  line-height: 2em ;
+  color: white;
+  text-decoration: none;
+}
+
+.menu li a{
+  text-align:center;
+  display:block;
+  padding: 6px 10px;  
+  color: white;
+  text-decoration: none;  
+}
+
+.menu .sous-menu{
+  position:absolute;
+  display:none;
+  margin:0;
+  padding:0;
+  background-color: black;
+  width:220px;
+  
+  
+  
+}
+
+
+/* sous-menu */
+
+.menu li a:hover{
+  
+  text-decoration-line  : underline ;
+}
+
+
+.menu li:hover .sous-menu{
+  display:block;
+}
+
+
+.sous-menu li{
+  float:left;
+  width:220px;
+  
+}
+
+.li a:hover a{
+  background-color:#111;
+  text-decoration-line  : none ;
+}
+
+
+.menu-deroulant:hover .sous-menu {
+display: block;
+}
+
+
+
+
+/* menu flèche animation */
+
+.menu-deroulant > a:after{
+  content: '❯';
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 10px;
+  
+}
+
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
+
+.menu-deroulant:hover > a:after{
+  animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid white;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid white;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  }
+}
+
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 1s forwards;
+}
+
+
+
+
+/* sous-sous menu */
+
+.sous-menu ul{
+  position: absolute;
+  margin-left: 200px;
+  top: 0;
+  width:220px;
+  background-color:black;
+}
+
+.sous-menu ul{
+display: none;
+}
+
+.sous-menu :hover > ul {
+display: block;
+}
+
+
+.sous-menu > li:after{
+  content: '❯';
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 10px;
+  
+}
+
+.sous-menu li:hover{
+  
+  text-decoration-line  : underline ;
+}
+
+
+
+
+
+.header{
+  text-align:center;
+  
+  
+}
+
+
+
+.ml7 {
+      
+      font-weight: 900;
+      font-size: 3.7em;
+}
+
+
+
+.ml7 .letters {
+      
+      line-height: 4em;
+}
+
+h1 {
+      color: white;
+      font-family: "Roboto";
+      font-weight: bolder !important;
+      font-size: 46px !important;
+      
+      text-transform: uppercase !important;
+}
+
+#tagline {
+      margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+      color: white;
+      font-weight: 200;
+      font-family: "Roboto";
+      line-height: 28px;
+      width: 640px;
+      
+      
+}
+
+
+
+
+.content {
+  color:white;
+  position: relative;
+  text-align:center;
+  }
+
+
+.center-con {
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: relative;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.fleche {
+    z-index: 999;
+    height: 2px;
+    margin:1px;
+    width: 15px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+.fleche:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+.fleche:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+.fleche:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+.fleche:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
+
+
+
+
+
+
+
+
+#timeline {
+  display: flex;
+  background-color: #031625;
+
+  &:hover {
+    .tl-item {
+      width: 23.3333%;
+    }
+  }
+}
+
+
+
+  
+.p {
+    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 0;
+  }
+}
+  
+
+.row{
+  display:flex;
+  height:88%;
+}
+
+
+.card{
+  width:200px;
+  height:200px;
+  display: inline-block;
+  border-radius:10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor:pointer;
+  margin: 10px 35px;
+  background-position:center;
+  background-size:cover;
+  transition: transform 0.5s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card1{
+  color:white;
+  background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Enigma_%28crittografia%29_-_Museo_scienza_e_tecnologia_Milano.jpg/220px-Enigma_%28crittografia%29_-_Museo_scienza_e_tecnologia_Milano.jpg");
+}
+
+.card2{
+  color:black;
+  background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/archive/3/35/20190417225046%21The_C_Programming_Language_logo.svg/120px-The_C_Programming_Language_logo.svg.png");
+}
+
+.card3{
+  color:white;
+  background-image:url("https://miro.medium.com/max/1400/1*HI3lsnUXtdVZ9NVdm5fuNQ.jpeg");
+}
+
+.card4{
+  color:black;
+  background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Fortran_logo.svg/131px-Fortran_logo.svg.png");
+}
+
+.card5{
+  color:black;
+  background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Motorola_6800_Assembly_Language.png/280px-Motorola_6800_Assembly_Language.png");
+}
+
+.card6{
+  color:white;
+  background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/280px-Googleplex_HQ_%28cropped%29.jpg");
+}
+
+
+.card7{
+  color:black;
+  background-image:url("https://logosave.com/images/large/16/UNIX-1-logo.png");
+}
+
+.card8{
+  color:white;
+  background-image:url("https://www.actuia.com/wp-content/uploads/2020/06/blockchain-technology-concept-PEHGTVU-696x406.jpg");
+}
+
+.card9{
+  color:white;
+  background-image:url("https://miro.medium.com/max/1024/0*h4cYJAhTWJIk8hnp.");
+}
+
+.card10{ 
+  color:grey;
+  background-image:url("https://i0.wp.com/decaldesignshop.com/wp-content/uploads/2015/05/logo_apple.jpg?fit=300%2C300&ssl=1");
+}
+
+
+h5{
+  font-size:17px;
+  position: relative;
+  text-align:center;
+}
+
