@@ -1,5 +1,12 @@
 body{
   background-color:black;
+  font-family:sans-sherif;
+  margin:0;
+  padding:0;
+  color:white;
+  line-height:1.5;
+  font-weight:400;
+  overflow-x:hidden;
  
 }
 
@@ -158,17 +165,6 @@ display: block;
 /* texte */
 
 
-
-body{
-  font-family:sans-sherif;
-  margin:0;
-  padding:0;
-  color:white;
-  line-height:1.5;
-  font-weight:400;
-  background-color: black; 
-  overflow-x:hidden;
-}
 
 .container{
   padding:2rem;
